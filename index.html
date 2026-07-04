@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Games</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img src="img/logo.png" alt="Portal Games" class="logo me-2">
+          <span>Portal Games</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#destaque">Destaque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#novidades">Novidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-sm" href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-5">
+    <section id="home" class="banner-section">
+      <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/banner1.PNG" class="d-block w-100" alt="Lançamentos de jogos">
+            <div class="carousel-caption d-none d-md-block text-start">
+              <span class="badge bg-danger mb-2">LANÇAMENTO</span>
+              <h1>Conquiste novos mundos</h1>
+              <p>Os melhores jogos, com descontos especiais e entrega rápida.</p>
+              <a class="btn btn-primary btn-lg" href="#novidades">Veja as novidades</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner2.PNG" class="d-block w-100" alt="Jogos de ação">
+            <div class="carousel-caption d-none d-md-block text-start">
+              <span class="badge bg-warning text-dark mb-2">EXCLUSIVO</span>
+              <h1>Explosão de ofertas</h1>
+              <p>Gameplays incríveis e ofertas que deixam todo mundo ligado.</p>
+              <a class="btn btn-light btn-lg" href="#destaque">Confira os destaques</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner3.PNG" class="d-block w-100" alt="Comunidade gamer">
+            <div class="carousel-caption d-none d-md-block text-start">
+              <span class="badge bg-info text-dark mb-2">COMUNIDADE</span>
+              <h1>Junte-se à nossa comunidade</h1>
+              <p>Cadastre-se e receba ofertas exclusivas, dicas e novidades primeiro.</p>
+              <a class="btn btn-primary btn-lg" href="login.html">Entrar agora</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="destaque" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Destaques da Semana</h2>
+          <p>Produtos selecionados com design moderno, jogabilidade intensa e avaliações de jogadores.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="card destaque-card h-100">
+              <img src="img/jogo1.PNG" class="card-img-top" alt="Jogo de aventura">
+              <div class="card-body">
+                <h3 class="card-title">Aventura Épica</h3>
+                <p class="card-text">Explore territórios desconhecidos e supere desafios impressionantes.</p>
+                <button class="btn btn-primary" onclick="showProduct('Aventura Épica')">Saiba mais</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="card destaque-card h-100">
+              <img src="img/jogo2.PNG" class="card-img-top" alt="Jogo de corrida">
+              <div class="card-body">
+                <h3 class="card-title">Corrida Turbo</h3>
+                <p class="card-text">Velocidade e adrenalina em pistas realistas para os pilotos mais ousados.</p>
+                <button class="btn btn-primary" onclick="showProduct('Corrida Turbo')">Saiba mais</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="card destaque-card h-100">
+              <img src="img/jogo3.PNG" class="card-img-top" alt="Jogo futurista">
+              <div class="card-body">
+                <h3 class="card-title">Futuro em Guerra</h3>
+                <p class="card-text">Complete missões táticas e equipe seu herói com tecnologia de ponta.</p>
+                <button class="btn btn-primary" onclick="showProduct('Futuro em Guerra')">Saiba mais</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="novidades" class="py-5 text-white novedades-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2>Novidades quentes</h2>
+            <p>Receba alertas de lançamentos, promoções e dicas por e-mail para não perder nenhuma oferta.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✔ Jogos exclusivos</li>
+              <li>✔ Descontos imperdíveis</li>
+              <li>✔ Lançamentos semanais</li>
+            </ul>
+            <form id="newsletter-form" class="row g-2" onsubmit="subscribeNewsletter(event)">
+              <div class="col-sm-8">
+                <input type="email" id="newsletter-email" class="form-control" placeholder="Seu e-mail" required>
+              </div>
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-warning w-100">Assinar newsletter</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="card novidade-card p-3">
+                  <h3 class="h5">Jogo do mês</h3>
+                  <p>Imersão total com gráficos realistas e história envolvente.</p>
+                  <button class="btn btn-outline-light novidade-btn" data-item="Jogo do mês">Quero saber</button>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card novidade-card p-3">
+                  <h3 class="h5">Super promoção</h3>
+                  <p>Pacotes com até 50% de desconto nos títulos mais vendidos.</p>
+                  <button class="btn btn-outline-light novidade-btn" data-item="Super promoção">Ver oferta</button>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card novidade-card p-3">
+                  <h3 class="h5">Jogos cooperativos</h3>
+                  <p>Junte seus amigos para partidas eletrizantes e diversão garantida.</p>
+                  <button class="btn btn-outline-light novidade-btn" data-item="Jogos cooperativos">Explorar</button>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card novidade-card p-3">
+                  <h3 class="h5">Conteúdo exclusivo</h3>
+                  <p>Receba guias rápidos e dicas para evoluir mais rápido nos jogos.</p>
+                  <button class="btn btn-outline-light novidade-btn" data-item="Conteúdo exclusivo">Ver conteúdo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Galeria de jogos</h2>
+          <p>Confira imagens de jogos e inspirações para a sua próxima jogatina.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3">
+            <div class="gallery-item">
+              <img src="img/banner1.PNG" alt="Galeria 1" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="gallery-item">
+              <img src="img/jogo1.PNG" alt="Galeria 2" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="gallery-item">
+              <img src="img/jogo2.PNG" alt="Galeria 3" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="gallery-item">
+              <img src="img/jogo3.PNG" alt="Galeria 4" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-5 bg-secondary text-white">
+      <div class="container text-center">
+        <h2>Fale conosco</h2>
+        <p>Envie sua mensagem e vamos te ajudar a encontrar o melhor jogo para o seu perfil.</p>
+        <button type="button" class="btn btn-outline-light btn-lg" onclick="showMessage('Em breve responderemos seu contato!')">Enviar mensagem</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-2">© 2026 Portal Games. Todos os direitos reservados.</p>
+          <p class="small">Desenvolvido com HTML5, CSS3, Bootstrap, JavaScript e jQuery.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#home" class="footer-link me-3">Home</a>
+          <a href="login.html" class="footer-link">Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="voltar-topo" type="button" class="btn btn-primary" onclick="topo()">&uarr; Topo</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="js/jquery-script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
