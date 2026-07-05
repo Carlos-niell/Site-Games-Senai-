@@ -31,7 +31,7 @@ Projeto de portfólio com página inicial e login, desenvolvido para o curso Sen
 
 ## Prints do projeto
 
-![Home funcionando](print-index.png)
+![Home funcionando](print-home.png)
 
 ![Login funcionando](print-login.png)
 
