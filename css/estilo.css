@@ -5,6 +5,49 @@
   --accent-dark: #d94a29;
   --text-dark: #1b1f33;
   --text-light: #f8f9fb;
+  --page-bg: #f7f8fc;
+  --page-text: #1b1f33;
+  --surface: #ffffff;
+  --surface-secondary: #f1f4fb;
+  --surface-strong: #0f1632;
+  --navbar-bg: #0e1425;
+  --footer-bg: #090b16;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --link-color: #0d6efd;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--page-text);
+}
+
+body.dark-theme {
+  --page-bg: #0b1020;
+  --page-text: #f8f9fb;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-secondary: #111b33;
+  --surface-strong: #0f1632;
+  --navbar-bg: #0e1425;
+  --footer-bg: #090b16;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --link-color: #ffcc55;
+}
+
+body.light-theme {
+  --page-bg: #f7f8fc;
+  --page-text: #1b1f33;
+  --surface: #ffffff;
+  --surface-secondary: #eef2ff;
+  --surface-strong: #dfe9f8;
+  --navbar-bg: #ffffff;
+  --footer-bg: #f5f7ff;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --link-color: #0d6efd;
 }
 
 * {
@@ -14,12 +57,40 @@
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
+  background-color: var(--page-bg);
+  color: var(--page-text);
 }
 
 a {
-  color: inherit;
+  color: var(--link-color);
+}
+
+body,
+.navbar,
+.footer-section,
+.card,
+.destaque-card,
+.novidade-card,
+.gallery-item,
+.login-page .card,
+.login-page header,
+.form-control,
+.btn,
+.novedades-section {
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+body:not(.dark-theme):not(.light-theme) {
+  --page-bg: #f7f8fc;
+  --page-text: #1b1f33;
+  --surface: #ffffff;
+  --surface-secondary: #f1f4fb;
+  --surface-strong: #0f1632;
+  --navbar-bg: #0e1425;
+  --footer-bg: #090b16;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --link-color: #0d6efd;
 }
 
 img {
@@ -106,6 +177,321 @@ img {
   color: var(--accent);
 }
 
+.light-theme .navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+.light-theme .navbar .nav-link,
+.light-theme .navbar-brand span,
+.light-theme .navbar .btn {
+  color: #1b1f33 !important;
+}
+
+.light-theme .navbar .btn-outline-light {
+  color: #1b1f33;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.light-theme .navbar .btn-outline-light:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .carousel-caption {
+  text-shadow: none;
+  color: #1b1f33;
+}
+
+.light-theme .destaque-card,
+.light-theme .card,
+.light-theme .gallery-item,
+.light-theme .login-page .card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+.light-theme .destaque-card h3,
+.light-theme .card h3,
+.light-theme .card p,
+.light-theme .card-body,
+.light-theme .card-text,
+.light-theme .novedade-card h3,
+.light-theme .novedade-card p,
+.light-theme .novedades-section h2,
+.light-theme .novedades-section p,
+.light-theme .novedades-section li,
+.light-theme .novedades-section .btn,
+.light-theme .footer-section,
+.light-theme .footer-link,
+.light-theme .footer-link:hover,
+.light-theme .login-page,
+.light-theme .login-page header,
+.light-theme .login-page footer,
+.light-theme .login-page .form-control {
+  color: #1b1f33 !important;
+}
+
+.light-theme .novedades-section {
+  background: linear-gradient(135deg, #eef2ff 0%, #dfe9f8 100%);
+}
+
+.light-theme .novidade-card {
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.light-theme .novidade-card h3 {
+  color: #1b1f33 !important;
+}
+
+.light-theme .novidade-card p {
+  color: rgba(27, 31, 51, 0.8) !important;
+}
+
+.light-theme .footer-section {
+  background-color: var(--footer-bg) !important;
+  color: #1b1f33;
+}
+
+.light-theme .footer-link {
+  color: #1b1f33;
+}
+
+.light-theme .footer-link:hover {
+  color: #0d6efd;
+}
+
+.dark-theme .navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+.dark-theme .navbar .nav-link,
+.dark-theme .navbar-brand span,
+.dark-theme .navbar .btn {
+  color: #f8f9fb !important;
+}
+
+.dark-theme .carousel-caption {
+  text-shadow: 0 10px 18px rgba(0, 0, 0, 0.65);
+  color: #f8f9fb;
+}
+
+.dark-theme .destaque-card,
+.dark-theme .card,
+.dark-theme .gallery-item,
+.dark-theme .novidade-card,
+.dark-theme .login-page .card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.10) !important;
+}
+
+.dark-theme .destaque-card h3,
+.dark-theme .card h3,
+.dark-theme .card p,
+.dark-theme .novedade-card h3,
+.dark-theme .novedade-card p,
+.dark-theme .novedades-section h2,
+.dark-theme .novedades-section p,
+.dark-theme .novedades-section li,
+.dark-theme .novedades-section .btn,
+.dark-theme .login-page,
+.dark-theme .login-page header,
+.dark-theme .login-page footer,
+.dark-theme .login-page .form-control,
+.dark-theme .footer-section,
+.dark-theme .footer-link,
+.dark-theme .footer-link:hover {
+  color: #f8f9fb !important;
+}
+
+.dark-theme .novedade-card p {
+  color: rgba(248, 249, 251, 0.85) !important;
+}
+
+.dark-theme .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.dark-theme .navbar .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme .bg-light,
+.dark-theme .bg-white,
+.dark-theme .bg-secondary {
+  background-color: #0c1422 !important;
+}
+
+.dark-theme .card,
+.dark-theme .destaque-card,
+.dark-theme .novidade-card,
+.dark-theme .gallery-item,
+.dark-theme .login-page .card {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.dark-theme .card-body,
+.dark-theme .card-title,
+.dark-theme .card h3,
+.dark-theme .card p,
+.dark-theme .card-text,
+.dark-theme .novedade-card h3,
+.dark-theme .novedade-card p,
+.dark-theme .novedade-card .btn,
+.dark-theme .novedades-section h2,
+.dark-theme .novedades-section p,
+.dark-theme .novedades-section li,
+.dark-theme .novedades-section .btn {
+  color: #f8f9fb !important;
+}
+
+.dark-theme .novedades-section {
+  background: linear-gradient(135deg, #0f1632 0%, #151a37 100%);
+}
+
+body.login-page.dark-theme .card,
+body.login-page.dark-theme .destaque-card,
+body.login-page.dark-theme .novidade-card,
+body.login-page.dark-theme .gallery-item {
+  background-color: #f8f9ff !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+body.login-page.dark-theme .card h2,
+body.login-page.dark-theme .card h3,
+body.login-page.dark-theme .card p,
+body.login-page.dark-theme .card label,
+body.login-page.dark-theme .card .form-label,
+body.login-page.dark-theme .card ul li,
+body.login-page.dark-theme .card .btn,
+body.login-page.dark-theme .card .btn-outline-primary,
+body.login-page.dark-theme .card .btn-success,
+body.login-page.dark-theme .card small,
+body.login-page.dark-theme .card a {
+  color: #1b1f33 !important;
+}
+
+body.login-page.dark-theme .form-control {
+  background: #ffffff !important;
+  color: #1b1f33 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+body.login-page.dark-theme .form-control::placeholder {
+  color: rgba(27, 31, 51, 0.45) !important;
+}
+
+body.login-page.dark-theme .form-control:focus {
+  background-color: #ffffff !important;
+  color: #1b1f33 !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 64, 0.2) !important;
+}
+
+body.login-page.dark-theme .card,
+body.login-page.dark-theme .login-page .card,
+body.login-page.dark-theme .card h2,
+body.login-page.dark-theme .card h3,
+body.login-page.dark-theme .card p,
+body.login-page.dark-theme .card label,
+body.login-page.dark-theme .card .form-label,
+body.login-page.dark-theme .card ul li,
+body.login-page.dark-theme .card .btn,
+body.login-page.dark-theme .card .btn-outline-primary,
+body.login-page.dark-theme .card .btn-success,
+body.login-page.dark-theme .card small,
+body.login-page.dark-theme .card a,
+body.login-page.dark-theme .form-control,
+body.login-page.dark-theme .form-control::placeholder,
+body.login-page.dark-theme .btn-outline-primary,
+body.login-page.dark-theme .btn-success,
+body.login-page.dark-theme .btn-outline-light {
+  color: #1b1f33 !important;
+}
+
+body.login-page.dark-theme .card,
+body.login-page.dark-theme .login-page .card {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+body.login-page.dark-theme .form-control {
+  background: #ffffff !important;
+  color: #1b1f33 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+body.login-page.dark-theme .form-control::placeholder {
+  color: rgba(27, 31, 51, 0.45) !important;
+}
+
+
+body.login-page.dark-theme .card,
+body.login-page.dark-theme .destaque-card,
+body.login-page.dark-theme .novidade-card,
+body.login-page.dark-theme .gallery-item,
+body.login-page.dark-theme .login-page .card,
+body.login-page.dark-theme section.card {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.login-page.dark-theme .card h2,
+body.login-page.dark-theme .card h3,
+body.login-page.dark-theme .card p,
+body.login-page.dark-theme .login-page .card label,
+body.login-page.dark-theme .login-page .card .form-label,
+body.login-page.dark-theme .login-page .card ul li,
+body.login-page.dark-theme .login-page .card .btn,
+body.login-page.dark-theme .login-page .card .btn-outline-primary,
+body.login-page.dark-theme .login-page .card .btn-success,
+body.login-page.dark-theme .login-page .card small,
+body.login-page.dark-theme .login-page .card a {
+  color: #1b1f33 !important;
+}
+
+body.login-page.dark-theme .form-control {
+  background: #ffffff !important;
+  color: #1b1f33 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+body.login-page.dark-theme .form-control::placeholder {
+  color: rgba(27, 31, 51, 0.45) !important;
+}
+
+body.login-page.dark-theme .btn-outline-primary,
+body.login-page.dark-theme .btn-success,
+body.login-page.dark-theme .btn-outline-light {
+  color: #1b1f33 !important;
+}
+
+.light-theme .login-page {
+  background: #f4f7ff;
+  color: #1b1f33;
+}
+
+.light-theme .login-page header,
+.light-theme .login-page footer {
+  background: #ffffff;
+}
+
+.light-theme .login-page .form-control {
+  background: #f7f9ff;
+  color: #1b1f33;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.light-theme .login-page .btn-outline-light {
+  color: #1b1f33;
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+.light-theme .login-page .btn-outline-light:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
 #voltar-topo {
   position: fixed;
   right: 20px;
@@ -126,19 +512,42 @@ img {
 }
 
 .login-page .card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.login-page .form-control {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: rgba(8, 16, 28, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.login-page .card h2,
+.login-page .card p,
+.login-page .card label,
+.login-page .card .form-label,
+.login-page .card ul li,
+.login-page .card .btn,
+.login-page .card .btn-outline-primary,
+.login-page .card .btn-success {
+  color: #f8f9ff !important;
+}
+
+.login-page .card ul li {
+  color: rgba(248, 249, 255, 0.82) !important;
+}
+
+.login-page .card h2 {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.login-page .form-control {
+  background: rgba(255, 255, 255, 0.10);
+  color: #f8f9ff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-page .form-control::placeholder {
+  color: rgba(248, 249, 255, 0.65);
+}
+
 .login-page .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #f8f9ff;
   border-color: var(--accent);
   box-shadow: 0 0 0 0.2rem rgba(255, 107, 64, 0.2);
 }

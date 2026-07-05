@@ -19,6 +19,7 @@ Projeto de portfólio com página inicial e login, desenvolvido para o curso Sen
   - novidades com formulário de newsletter
   - galeria de imagens
   - rodapé com links
+  - alternância entre tema escuro e claro com preferência salva no navegador
 - Página `login.html` com:
   - formulário de login
   - formulário de cadastro com validação básica

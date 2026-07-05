@@ -108,4 +108,31 @@ window.addEventListener("DOMContentLoaded", function () {
   if (cadastroForm) {
     cadastroForm.classList.add("show");
   }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    const savedTheme = localStorage.getItem("portal-games-theme") || "dark";
+    setTheme(savedTheme);
+    themeToggle.addEventListener("click", function () {
+      const currentTheme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+      localStorage.setItem("portal-games-theme", nextTheme);
+    });
+  }
 });
+
+function setTheme(theme) {
+  document.body.classList.remove("dark-theme", "light-theme");
+  if (theme === "light") {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.add("dark-theme");
+  }
+  const toggle = document.getElementById("theme-toggle");
+  if (toggle) {
+    toggle.textContent = theme === "light" ? "🌙" : "☀";
+    toggle.classList.toggle("btn-outline-light", theme === "dark");
+    toggle.classList.toggle("btn-outline-dark", theme === "light");
+  }
+}

@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  $("#open-register").on("click", function () {
-    $("#form-cadastrar").toggleClass("show");
-  });
-
   $(".novidade-btn").on("click", function () {
     const item = $(this).data("item") || "novidade";
     showMessage(`Você selecionou: ${item}. Em breve teremos mais informações.`, "info");
