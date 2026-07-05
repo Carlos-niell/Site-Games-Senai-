@@ -32,11 +32,11 @@ Projeto de portfólio com página inicial e login, desenvolvido para o curso Sen
 ## Prints do projeto
 
 <p align="center">
-  <img src="print-home.png" alt="Home funcionando" width="700" />
+  <img src="print-home-clean.png" alt="Home funcionando" width="700" />
 </p>
 
 <p align="center">
-  <img src="print-login.png" alt="Login funcionando" width="700" />
+  <img src="print-login-clean.png" alt="Login funcionando" width="700" />
 </p>
 
 ## Como usar
