@@ -31,9 +31,13 @@ Projeto de portfólio com página inicial e login, desenvolvido para o curso Sen
 
 ## Prints do projeto
 
-![Home funcionando](print-home.png)
+<p align="center">
+  <img src="print-home.png" alt="Home funcionando" width="700" />
+</p>
 
-![Login funcionando](print-login.png)
+<p align="center">
+  <img src="print-login.png" alt="Login funcionando" width="700" />
+</p>
 
 ## Como usar
 
